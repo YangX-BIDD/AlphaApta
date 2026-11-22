@@ -1,0 +1,84 @@
+{
+  "title": "AlphaApta open model checkpoints and sequence-masked single-cell and Cell-SELEX abundance matrices",
+  "description": "Open reproducibility deposit for AlphaApta, a multimodal computational framework for cell-conditioned aptamer design. This release provides: (1) retained Stage 1 HyenaDNA D1, Stage 2 GNN-Transformer D2, and six-fold leave-one-cell-line-out Stage 3 energy-based D3 model checkpoints (AlphaApta_Model_Checkpoints_v2.tar.zst); (2) primary BD Rhapsody single-cell RNA and AbSeq RSEC UMI count matrices, 50-dimensional WNN coordinates, and sequence-masked Stage 2 single-cell aptamer UMI count matrices in MatrixMarket format (AlphaApta_SingleCell_Count_Matrices.zip); and (3) all 109,321,575 normalized Round-15 Cell-SELEX relative-abundance records with nucleotide strings masked by length-matched N characters and anonymous record identifiers (AlphaApta_Round15_SELEX_SequenceRedacted.tsv.zst).",
+  "creators": [
+    {
+      "name": "Yang, Xin"
+    },
+    {
+      "name": "Ren, Meishen"
+    },
+    {
+      "name": "Ding, Shijian"
+    },
+    {
+      "name": "Zhang, Huarui"
+    },
+    {
+      "name": "Tao, Xiaohui"
+    },
+    {
+      "name": "Xue, Xue"
+    },
+    {
+      "name": "Zhang, Ning"
+    },
+    {
+      "name": "Zhang, Yihao"
+    },
+    {
+      "name": "Jiang, Hewen"
+    },
+    {
+      "name": "Lei, Chongguang"
+    },
+    {
+      "name": "Pan, Yufei"
+    },
+    {
+      "name": "Yao, Shanshan"
+    },
+    {
+      "name": "Wang, Luyao"
+    },
+    {
+      "name": "Ma, Yuan"
+    },
+    {
+      "name": "He, Yixin"
+    },
+    {
+      "name": "Yu, Yuanyuan"
+    },
+    {
+      "name": "Yu, Sifan"
+    },
+    {
+      "name": "Lyu, Aiping"
+    },
+    {
+      "name": "Zhang, Bao-Ting"
+    },
+    {
+      "name": "Zhang, Ge"
+    }
+  ],
+  "keywords": [
+    "aptamer",
+    "Cell-SELEX",
+    "single-cell multi-omics",
+    "energy-based model",
+    "cell-conditioned generation"
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/YangX-BIDD/AlphaApta",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ],
+  "version": "2.0.0"
+}

@@ -1,0 +1,33 @@
+task:
+  name: d1_sequence_frequency_regression
+  objective: mean_squared_error
+
+data:
+  path: data/R15_freq.txt
+  raw_rows: 109321575
+  eligible_records: 108947560
+  training_records: 98052804
+  sequence_length_minimum: 10
+  sequence_length_maximum: 42
+  target: standardized_log10_observed_frequency
+  training_fraction: 0.9
+  split_seed: 42
+
+model:
+  pretrained_backbone: LongSafari/hyenadna-small-32k-seqlen-hf
+  hidden_dimension: 256
+  maximum_tokenized_length: 128
+  pooling: mean_last_hidden_state
+  head: layernorm_linear_scalar
+  masked_language_modeling: false
+
+training:
+  optimizer: AdamW
+  learning_rate: 3.0e-4
+  weight_decay: 1.0e-5
+  batch_size: 512
+  epochs: 3
+  precision: fp32
+  num_workers: 8
+  scheduler: none
+  checkpoint_selection: final_epoch

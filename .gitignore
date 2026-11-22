@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+.venv/
+.env
+_legacy_archive/
+
+# Large Data Files (hosted on Zenodo)
+*.pt
+*.pth
+*.h5mu
+*.h5ad
+*.fa
+*.fasta
+*.gz
+*.tar
+*.zip
+*.tiff
+
+# Keep .gitkeep files
+!.gitkeep
+
+# Specific files to ignore
+all_notebooks/figure2_root.ipynb
+
+# Specific Directories
+logs/
+output/
+temp/
+wandb/
+__MACOSX/
+.DS_Store
+
+# Data directory - include structure but exclude large files
+data/processed/*.h5mu
+data/processed/*.h5ad
+
+# Models directory - include structure but exclude large files  
+models/checkpoints/**/*.pth
+models/checkpoints/**/*.pt
+
+# Node modules (Recursive)
+**/node_modules/
+node_modules/
+
+# Logs (Recursive)
+**/*.log
+*.log
+
+# Local-only files
+README_full_local.md
+
+# Project Extras (Local Only)
+alphaapta_v2/
+.vscode/
+analysis/

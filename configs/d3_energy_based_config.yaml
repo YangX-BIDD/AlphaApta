@@ -1,0 +1,41 @@
+task:
+  name: d3_cell_conditioned_energy_based_generation
+
+data:
+  sequence_length: 40
+  vocabulary_size: 5
+  vocabulary: [PAD, A, C, G, T]
+  sampled_alphabet: [A, C, G, T]
+  cellular_condition_dimension: 256
+  cellular_condition_source: frozen_d2_cell_context_encoder
+
+model:
+  hidden_dimension: 256
+  transformer_encoder_layers: 3
+  attention_heads: 4
+  feedforward_dimension: 512
+  dropout: 0.1
+  pooling: mean
+  scalar_energy_head_layers: 2
+  causal_masking: false
+  autoregressive_objective: false
+
+training:
+  optimizer: AdamW
+  learning_rate: 2.0e-4
+  weight_decay: 1.0e-4
+  epochs: 100
+  seed: 42
+  positive_examples: exact_40nt_acgt_training_cores
+  energy_regularization: 0.1
+  d2_binding_score_in_loss: false
+
+inference:
+  initial_nucleotide_logits: 0.0
+  langevin_steps: 20
+  gradient_step_size: 10.0
+  gaussian_noise_standard_deviation: 0.005
+  temperature: 1.0
+  exclude_padding_state: true
+  top_p: null
+  top_k: null

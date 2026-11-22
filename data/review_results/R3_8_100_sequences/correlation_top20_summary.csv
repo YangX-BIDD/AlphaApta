@@ -1,0 +1,6 @@
+condition,n_sequences,spearman_rho,two_sided_p,top20_overlap_n,top20_overlap_percent,top20_overlap_source_records,score_tie_at_cutoff,abundance_tie_at_cutoff,APT1_score_rank
+AGS,100,0.1464746474647464,0.1458945583798544,7,35.0,"1,4,6,7,11,14,18",False,False,1
+MKN-1,100,0.1579237923792379,0.1165902711078127,7,35.0,"1,4,6,7,11,14,18",False,False,1
+MKN-28,100,0.1459345934593459,0.1474027231867252,7,35.0,"1,4,6,7,11,14,18",False,False,1
+NCI-N87,100,0.1479387938793879,0.1418642754784232,7,35.0,"1,4,6,7,11,14,18",False,False,1
+GES-1,100,0.1473867386738674,0.1433738844096146,7,35.0,"1,4,6,7,11,14,18",False,False,1

@@ -1,0 +1,58 @@
+task:
+  name: d2_binary_aptamer_cell_event_prediction
+
+inputs:
+  aptamer:
+    source: frozen_d1_hyenadna_token_states
+    hidden_dimension: 256
+    maximum_tokenized_length: 64
+  cell:
+    layout:
+      - {name: wnn, dimension: 50, derived_from: [rna, abseq]}
+      - {name: rna, dimension: 3000}
+      - {name: abseq, dimension: 207}
+    total_dimension: 3257
+  excluded_predictor_inputs:
+    - aptamer_barcode_count
+    - aptamer_binding_profile
+
+supervision:
+  positive_definition: aptamer_barcode_count_at_least_1
+  negatives_per_positive: 2
+  positive_events: 147177
+  sampled_negative_events: 294354
+  raw_count_loss_weighting: false
+
+model:
+  hidden_dimension: 256
+  aptamer_graph:
+    neighbors: 8
+    residual_message_passing_layers: 2
+    transformer_encoder_layers: 2
+  named_cell_tokens: 3207
+  cross_attention_layers: 2
+  cross_attention_heads: 8
+  cross_attention_dropout: 0.0
+  aptamer_transformer_dropout: 0.1
+  pooled_cell_branch_dimension: 256
+  output_logits: 2
+
+objective:
+  cross_entropy:
+    class_weighting: none
+  symmetric_infonce:
+    weight: 0.5
+    initial_logit_scale: 2.3
+    maximum_exp_logit_scale: 100.0
+
+training:
+  seed: 42
+  optimizer: AdamW
+  learning_rate: 3.0e-4
+  weight_decay: 1.0e-5
+  batch_size: 64
+  gradient_accumulation_steps: 1
+  gradient_norm_clip: 1.0
+  precision: bfloat16
+  scheduler: CosineAnnealingLR
+  checkpoint_selection: final_epoch
