@@ -323,14 +323,6 @@ def label_sections_to_index(label):
     return (cl1 - 1) * 384 * 384 + (cl2 - 1) * 384 + (cl3 - 1) + 1
 
 
-print(label_sections_to_index('1-1-1'))
-print(label_sections_to_index('33-78-21'))
-print(label_sections_to_index('43-12-77'))
-print(label_sections_to_index('96-96-96'))
-print(label_sections_to_index('135-43-344'))
-print(label_sections_to_index('384-384-384'))
-print('-')
-
 #----------------------------------
 
 
@@ -345,13 +337,6 @@ def index_to_label_sections(index):
     return f'{cl1}-{cl2}-{cl3}'
 
 
-print(index_to_label_sections(1))
-print(index_to_label_sections(4748181))
-print(index_to_label_sections(6197453))
-print(index_to_label_sections(14044896))
-print(index_to_label_sections(19775576))
-print(index_to_label_sections(56623104))
-print('-')
 #----------------------------------
 
 
@@ -399,10 +384,6 @@ def index_to_sequence(index, bead_version):
 
         return f'{diversityInsert}{cls1_sequence}{Enh_linker1}{cls2_sequence}{Enh_linker2}{cls3_sequence}'
 
-
-print(index_to_sequence(4748181, 'Enh'))
-print(index_to_sequence(52923177, 'EnhV2'))
-print(index_to_sequence(901, 'EnhV2'))
 
 #----------------------------------
 

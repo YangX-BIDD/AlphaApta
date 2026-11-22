@@ -30,7 +30,7 @@ Recompute all 48 leave-one-cell-line-out fold metrics, paired cell-bootstrap int
 cd data/review_results && python verify_results.py
 ```
 
-See [USAGE.md](USAGE.md) for D1, D2, and D3 checkpoint inference examples.
+See [USAGE.md](USAGE.md) for D1, D2, and D3 checkpoint inference examples, or access the interactive online research platform at [alphaapta.ai](https://alphaapta.ai).
 
 ## Open data and model checkpoints (Zenodo)
 

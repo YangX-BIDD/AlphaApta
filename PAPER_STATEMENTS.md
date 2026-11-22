@@ -6,4 +6,4 @@ Open model checkpoints (`AlphaApta_Model_Checkpoints_v2.tar.zst`), primary singl
 
 ## Code availability
 
-Source code, audited configurations, and numerical verification scripts are publicly available at [github.com/YangX-BIDD/AlphaApta](https://github.com/YangX-BIDD/AlphaApta).
+Source code, audited configurations, and numerical verification scripts are publicly available at [github.com/YangX-BIDD/AlphaApta](https://github.com/YangX-BIDD/AlphaApta), and interactive browser-based inference is available at [alphaapta.ai](https://alphaapta.ai).
