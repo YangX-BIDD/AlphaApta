@@ -1,4 +1,4 @@
-# D2 Pre-training Requirements
+# AlphaApta v2.0 Core Requirements
 
 # Core ML frameworks
 torch>=2.1.0

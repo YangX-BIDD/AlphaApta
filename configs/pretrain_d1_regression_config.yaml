@@ -3,6 +3,7 @@ task:
   objective: mean_squared_error
 
 data:
+  # Public sequence-redacted abundance table: AlphaApta_Round15_SELEX_SequenceRedacted.tsv.zst (Zenodo 10.5281/zenodo.18242287)
   path: data/R15_freq.txt
   raw_rows: 109321575
   eligible_records: 108947560
